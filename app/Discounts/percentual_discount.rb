@@ -1,9 +1,9 @@
-class PercentDiscount
+class PercentualDiscount
 
-  attr_reader :percent_discount, :threshold
+  attr_reader :percentual_discount, :threshold
 
-  def initialize(percent_discount:, threshold:)
-    @percent_discount = percent_discount
+  def initialize(percentual_discount:, threshold:)
+    @percentual_discount = percentual_discount
     @threshold = threshold
   end
 
@@ -18,6 +18,6 @@ class PercentDiscount
   end
 
   def apply_discount(current_total)
-    current_total * percent_discount / 100
+    current_total * percentual_discount / 100
   end
 end
