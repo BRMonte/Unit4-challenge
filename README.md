@@ -6,12 +6,12 @@ The system can be run from a REPL such as irb or pry. To open irb enter $ irb wh
 
 $ irb
 
-# I- import checkout and item files from lib,
+# I- import checkout and item files from lib
 
 require_relative 'app/checkout'<br/>
 require_relative 'app/item'<br/>
 
-# II- require the discounts you plan to use,
+# II- require the discounts you plan to use
 
 require_relative 'app/discounts/item_discount'<br/>
 require_relative 'app/discounts/percentual_discount'<br/>
@@ -24,7 +24,7 @@ item_003 = Item.new(code: '003', name: 'Kids T-shirt', price: 1995)<br/>
 # IV- Store the above items in an array to be used by the system
 products = [item_001, item_002, item_003]<br/>
 
-# V- Create the promotional rules you need to apply,
+# V- Create the promotional rules you need to apply
 Two constructors are provided: PercentualDiscount and ItemDiscount<br/>
 
 # Example rule: apply a 10% discount to orders over €60,00
@@ -52,7 +52,7 @@ checkout.scan '003'<br/><br/>
 price = checkout.total<br/>
 price # => '€73.76'<br/><br/>
 
-Running Tests<br/>
+# Running Tests
 To run the test suite, simply run rspec from the root directory.<br/>
 
 $ rspec
