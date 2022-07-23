@@ -1,4 +1,4 @@
-Checkout System
+# Checkout System
 A checkout system that calculates the cost of a basket and applies any special discounts or pricing rules which are required for that order.
 
 Usage Instructions
@@ -25,7 +25,7 @@ item_003 = Item.new(code: '003', name: 'Kids T-shirt', price: 1995)
 products = [item_001, item_002, item_003]
 
 # V- Create the promotional rules you need to apply,
-# Two constructors are provided: PercentualDiscount and ItemDiscount
+Two constructors are provided: PercentualDiscount and ItemDiscount
 
 # Example rule: apply a 10% discount to orders over €60,00
 ten_percent_discount = PercentualDiscount.new(percentual_discount: 10, threshold: 6000)
@@ -40,10 +40,10 @@ pricing_rules = [lavender_heart_discount, ten_percent_discount]
 checkout = Checkout.new(pricing_rules, products: products)
 
 # The checkout has 2 methods,
-# #scan => takes the item's key code as a string and adds it to your cart
-# #total => returns the cart's total cost as a string in euros
+scan => takes the item's key code as a string and adds it to your cart
+total => returns the cart's total cost as a string in euros
 
-# For example here's a basket which takes advantage of both rules we built
+Example: a cart using both promotional rules
 checkout.scan '001'
 checkout.scan '002'
 checkout.scan '001'
