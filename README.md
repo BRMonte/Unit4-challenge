@@ -8,8 +8,8 @@ $ irb
 
 # I- import checkout and item files from lib,
 
-require_relative 'app/checkout'
-require_relative 'app/item'
+//require_relative 'app/checkout'
+//require_relative 'app/item'
 
 # II- require the discounts you plan to use,
 
